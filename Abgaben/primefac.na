@@ -1,0 +1,85 @@
+#Primefaktorenzerlegung
+
+"Enter Number:"
+inc 12
+
+#Ausgabe von Enter Number:"
+lit 0
+lit 13
+lit 14 
+out 2
+
+la 0 4 #userInput
+la 0 8 #
+in 0
+
+la 0 8 #modValue
+lit 1
+sto
+
+la 0 16 #foundValue
+lit 0
+sto
+
+.firstPart
+.secondPart
+
+#modValue++
+la 0 8
+lv 0 8
+lit 1
+add
+sto
+
+#userInput % modValue
+la 0 16
+lv 0 4
+lv 0 8
+mod
+sto
+
+#if
+
+lv 0 16
+lit 0
+rel 2
+fjmp .secondPart
+
+
+#print out
+lv 0 8
+lit 1
+out 0 
+out 3
+
+# divide
+la 0 4
+
+lv 0 4
+lv 0 8
+div
+sto
+
+#set foundValue and modValue
+
+la 0 16
+lit 1
+sto
+
+la 0 8
+lit 1
+sto
+
+#check if userInput != 0
+lv 0 4
+lit 1
+rel 2
+
+fjmp .firstPart
+
+
+
+
+
+
+halt

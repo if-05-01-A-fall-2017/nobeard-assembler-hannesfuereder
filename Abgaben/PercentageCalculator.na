@@ -1,0 +1,51 @@
+"Enter the reached Points:Enter the max Points:The % he reached:"
+inc 24
+#Ausgabe von Enter reached Points
+lit 0
+lit 25
+lit 26
+out 2
+
+#einlesen erster zahl
+la 0 32	#int reachedPoints
+la 0 36
+in 0
+#Ausgabe von Enter max Points
+lit 25
+lit 21
+lit 22
+out 2
+
+#einlesen zweiter zahl
+la 0 40 #int maxPoints
+la 0 44
+in 0
+
+
+#mul
+la 0 52
+lv 0 32
+lit 100
+mul
+sto
+
+
+#div
+la 0 56
+
+lv 0 52
+
+lv 0 40
+div
+sto
+
+#ausgabe vom ergebnis
+
+
+lv 0 56
+lit 1
+out 0
+out 3
+
+
+halt
