@@ -1,0 +1,54 @@
+"Enter a number: "
+inc 12
+#Ausgabe von Enter a number
+
+lit 0
+lit 25
+lit 26
+out 2
+
+#enter the countNumber
+la 0 4 #int countTo
+la 0 12
+in 0
+
+la 0 4
+lv 0 4
+lit 1
+add
+sto
+
+
+#store 1
+la 0 8  #int countStart
+lit 1
+sto
+
+la 0 12 #int numberToPrint
+lit 1
+sto
+
+#loop
+.loop
+lv 0 12
+lit 1
+out 0
+out 3
+
+#add
+
+la 0 12
+
+lv 0 12
+lv 0 8
+add
+sto
+la 0 12
+
+lv 0 4
+lv 0 12
+rel 2		#Überprüfung ob countStart gleich ist mit numberToPrint
+
+fjmp .loop
+
+halt
